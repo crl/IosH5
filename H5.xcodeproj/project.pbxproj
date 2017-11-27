@@ -18,6 +18,7 @@
 		0CBCA63E1F8110FD0044FFF4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0CBCA63C1F8110FD0044FFF4 /* Main.storyboard */; };
 		0CBCA6401F8110FD0044FFF4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0CBCA63F1F8110FD0044FFF4 /* Assets.xcassets */; };
 		0CBCA6431F8110FD0044FFF4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0CBCA6411F8110FD0044FFF4 /* LaunchScreen.storyboard */; };
+		0CDD08EE1FCBF67500D0F2BA /* XtwSdk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CDD08ED1FCBF67500D0F2BA /* XtwSdk.framework */; };
 		0CF076621F8762E100CC6FAD /* IAPManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CF076611F8762E100CC6FAD /* IAPManager.swift */; };
 /* End PBXBuildFile section */
 
@@ -36,6 +37,7 @@
 		0CBCA63F1F8110FD0044FFF4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0CBCA6421F8110FD0044FFF4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0CBCA6441F8110FD0044FFF4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0CDD08ED1FCBF67500D0F2BA /* XtwSdk.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XtwSdk.framework; path = H5/XtwSdk.framework; sourceTree = "<group>"; };
 		0CF076611F8762E100CC6FAD /* IAPManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IAPManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -44,6 +46,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0CDD08EE1FCBF67500D0F2BA /* XtwSdk.framework in Frameworks */,
 				0CA7E18B1F9AFD6500A95375 /* GameKit.framework in Frameworks */,
 				0CA7E18E1F9C566A00A95375 /* StoreKit.framework in Frameworks */,
 			);
@@ -66,6 +69,7 @@
 		0C1033241F8143F400EF9BD2 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				0CDD08ED1FCBF67500D0F2BA /* XtwSdk.framework */,
 				0CA7E18D1F9C566A00A95375 /* StoreKit.framework */,
 				0CA7E18A1F9AFD6500A95375 /* GameKit.framework */,
 			);
@@ -342,6 +346,10 @@
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = 75YUB6PCBP;
 				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/H5",
+				);
 				INFOPLIST_FILE = H5/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.lingyu8.tahuoxinggeH5;
@@ -363,6 +371,10 @@
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = 75YUB6PCBP;
 				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/H5",
+				);
 				INFOPLIST_FILE = H5/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.lingyu8.tahuoxinggeH5;

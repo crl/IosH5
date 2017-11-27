@@ -16,39 +16,39 @@ class ViewController: UIViewController,WKNavigationDelegate {
     let reachability = Reachability()!;
     override func viewDidLoad() {
        
-        super.viewDidLoad()
+       super.viewDidLoad();
         
         // 创建配置
-        let config = WKWebViewConfiguration()
+        let config = WKWebViewConfiguration();
         // 创建UserContentController（提供JavaScript向webView发送消息的方法）
-        let userContent = WKUserContentController()
+        let userContent = WKUserContentController();
         // 添加消息处理，注意：self指代的对象需要遵守WKScriptMessageHandler协议，结束时需要移除
         //userContent.addScriptMessageHandler(self, name: "NativeMethod")
         // 将UserConttentController设置到配置文件
-        config.userContentController = userContent
+        config.userContentController = userContent;
         
         // 高端的自定义配置创建WKWebView
-        webView = WKWebView(frame: UIScreen.main.bounds, configuration: config)
+        webView = WKWebView(frame: UIScreen.main.bounds, configuration: config);
         
         // 设置代理
         webView.navigationDelegate = self;
         
         // 将WebView添加到当前view
-        view.addSubview(webView)
+        view.addSubview(webView);
         
         
         NotificationCenter.default.addObserver(self, selector: #selector(reachabilityChanged(note:)), name: .reachabilityChanged, object: reachability);
         do{
-            try reachability.startNotifier()
+            try reachability.startNotifier();
         }catch{
-            print("could not start reachability notifier")
+            print("could not start reachability notifier");
         }
         
     }
     
     override func viewDidDisappear(_ animated: Bool) {
-        reachability.stopNotifier()
-        NotificationCenter.default.removeObserver(self, name: .reachabilityChanged, object: reachability)
+        reachability.stopNotifier();
+        NotificationCenter.default.removeObserver(self, name: .reachabilityChanged, object: reachability);
         super.viewDidDisappear(animated);
     }
     
@@ -66,12 +66,6 @@ class ViewController: UIViewController,WKNavigationDelegate {
             altertStatus();
             print("Network not reachable")
         }
-        
-        
-        
-        
-        
-
     }
     
     // 无网络状态添加提示框
