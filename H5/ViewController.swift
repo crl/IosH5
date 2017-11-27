@@ -26,6 +26,7 @@ class ViewController: UIViewController,WKNavigationDelegate {
         //userContent.addScriptMessageHandler(self, name: "NativeMethod")
         // 将UserConttentController设置到配置文件
         config.userContentController = userContent
+        
         // 高端的自定义配置创建WKWebView
         webView = WKWebView(frame: UIScreen.main.bounds, configuration: config)
         
@@ -103,7 +104,7 @@ class ViewController: UIViewController,WKNavigationDelegate {
     
     func enterGame(userID:String) {
         // 设置访问的URL
-        let url = URL(string: "http://gate.shushanh5.lingyunetwork.com/gate/ios/login.aspx?userId=\(userID)");
+        let url = URL(string: "http://gate.shushanh5.lingyunetwork.com/gate/micro/login.aspx?userId=\(userID)");
         // 根据URL创建请求
         let requst = URLRequest(url: url!);
         
