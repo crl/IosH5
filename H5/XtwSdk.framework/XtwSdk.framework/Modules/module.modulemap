@@ -1,0 +1,6 @@
+framework module XtwSdk {
+  umbrella header "XtwSdk.h"
+
+  export *
+  module * { export * }
+}
